@@ -1,0 +1,21 @@
+
+<dataConfig>
+    
+    <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver"        
+                url="jdbc:mysql://localhost/manglasons" user="root" password="root"/>
+    
+    <document name="msProducts">
+        <entity name="PRODUCT" query="select * from product" transformer="TemplateTransformer" pk="ID">
+            <field column="doc_id" template="PRODUCT_${PRODUCT.id}" />
+            <field column="doc_type" template="PRODUCT" />
+            <field column="id" name="id" />
+            <field column="brand" name="brand" />
+            <field column="code" name="code" />
+            <field column="description" name="description" />
+            <field column="featured" name="isFeatured" />
+            <field column="in_stock" name="inStock" />
+            <field column="name" name="name" />
+            <field column="price" name="price" />
+        </entity>
+    </document>
+</dataConfig>
