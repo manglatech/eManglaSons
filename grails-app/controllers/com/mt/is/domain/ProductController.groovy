@@ -3,8 +3,14 @@ package com.mt.is.domain
 
 
 import static org.springframework.http.HttpStatus.*
+
+import com.mt.is.solr.SolrRequestParam
+import com.mt.is.solr.processors.SolrRequestProcessorImpl;
+
 import grails.converters.JSON
 import grails.transaction.Transactional
+
+import org.apache.solr.common.SolrDocumentList
 
 @Transactional(readOnly = true)
 class ProductController {
@@ -136,7 +142,7 @@ class ProductController {
 			return
 		}
 		
-		println "Product Details Page Called"
+		println "Product Details Page Called - ID - ${params?.id}"
 		def product = Product.get(params?.id)
 		
 		def uniqueAttributes = []
@@ -201,7 +207,41 @@ class ProductController {
 		[msProduct:product, prodDiffTypes:uniqueAttributesMap]
 		
 	}
-
+	
+	def searchProducts() {
+		
+		println "Search Called !!"
+		SolrRequestParam param = new SolrRequestParam();
+		param.reqParams.put("searchTerm", params.searchTerm)
+		
+		SolrDocumentList list = (SolrDocumentList) SolrRequestProcessorImpl.getInstance().executeSolrReq("sampleSearch", param);
+		
+		println("SIZE ${list.size()} ");
+		
+		def products = []
+		
+		list.each{
+			
+			def product = new Product()
+			
+			product.name = (String) it.getFieldValue("name")
+			product.id = new Long(it.getFieldValue("id"))
+			//TODO: WHY (Long) auto cast isnot working??? Findout.
+			println "id-: ${product?.id} : solrId:- ${it.getFieldValue("id")}"
+			product.description = (String) it.getFieldValue("description")
+			product.price = (Long) it.getFieldValue("price")
+			product.brand = (String) it.getFieldValue("brand")
+			product.featured = new Boolean(it.getFieldValue("isFeatured"))
+			product.inStock = new Boolean(it.getFieldValue("inStock"))
+			
+			products.add(product)
+		}
+		
+		println "Rending Search Result Page"
+		render(view: 'productlist', model: [products:products])
+		
+	}
+	
     protected void notFound() {
         request.withFormat {
             form multipartForm {

@@ -97,11 +97,13 @@
 							</ul>
 						</div>
 					</div>
+					<g:formRemote update="mainContent" url="[action:'searchProducts',controller:'product']" name="searchform">
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<g:textField name="searchTerm" placeholder="Search Term Here" />
 						</div>
 					</div>
+					</g:formRemote>
 				</div>
 			</div>
 		</div><!--/header-bottom-->

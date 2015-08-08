@@ -1,2 +1,7 @@
 /target/
 /target-eclipse/
+.classpath
+.settings/
+GSOLR/data/
+wrapper/
+.project

@@ -15,8 +15,7 @@ class SearchController {
 	def index(){
 		println "Search Form Called !! "
 	}
-	
-    def search() { 
+	def search() {
 		
 		println "Search Called !!"
 		SolrRequestParam param = new SolrRequestParam();
@@ -28,7 +27,7 @@ class SearchController {
 		
 		def products = []
 		
-		list.each{ 
+		list.each{
 			
 			def product = new Product()
 			
@@ -47,6 +46,9 @@ class SearchController {
 		render(view: '/search/searchResult', model: [products:products])
 		
 	}
+	
+    
+	
 	private void logException(final Exception exception) {
 		log.error "Exception occurred. ${exception?.message}", exception
 	}
