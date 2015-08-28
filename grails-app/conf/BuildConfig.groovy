@@ -65,6 +65,8 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
 		compile 'org.apache.solr:solr-solrj:5.2.1'
+		compile 'org.springframework.data:spring-data-solr:1.4.2.RELEASE'
+		
 		
     }
 
@@ -78,6 +80,7 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.9.9"
 		compile ":burning-image:0.5.2"
 		compile ":spring-security-core:2.0-RC5"
+		compile ":drools:1.1.1"
 		
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
