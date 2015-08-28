@@ -39,5 +39,6 @@ class UserRuleController {
 		droolsService.executeFromFile("rules/user.drl", [user])
 		model.results["applicationStatelessSession - my user name is $user.username (true)"] = user.username
 		
-		}
+		return model
+	}
 }
