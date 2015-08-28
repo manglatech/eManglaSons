@@ -1,9 +1,8 @@
-import com.mt.is.domain.user
+import com.mt.is.domain.user.User
 
 rule "UserName is dhaval"
 when
     $u : User(username == "dhaval")
 then
     System.out.println("User is Dhaval");
-    $u.setValid(true);
 end
