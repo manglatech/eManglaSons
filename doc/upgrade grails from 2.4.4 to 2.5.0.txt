@@ -1,0 +1,12 @@
+Install Grails 2.5.0
+https://grails.org/download.html
+
+Install Groovy 2.4 
+https://tedvinke.wordpress.com/2015/04/10/grails-3-released-installing-gradle-and-groovy-2-4-support-in-eclipseggts/
+
+1. Go to Help > Install New Software and use the update site http://dist.springsource.org/snapshot/GRECLIPSE/e4.4/
+
+2. Select the Groovy 2.4 compiler and Next.
+
+Project Level Changes
+http://totalprogus.blogspot.com/2015/03/upgrade-grails-244-to-250.html

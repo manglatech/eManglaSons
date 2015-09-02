@@ -167,3 +167,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':  ['permitAll']
 ]
 
+elasticSearch{
+	datastoreImpl='hibernateDatastore'
+}
+

@@ -5,6 +5,8 @@ import pl.burningice.plugins.image.ast.FileImageContainer;
 @FileImageContainer(field = 'productImage')
 class Product {
 	
+	//static searchable = true
+	
 	String code = "12345678"
 	String name
 	String description
