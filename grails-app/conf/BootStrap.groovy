@@ -3,6 +3,7 @@ import com.mt.is.domain.Category
 import com.mt.is.domain.CategoryMapping;
 import com.mt.is.domain.Product;
 import com.mt.is.domain.SKU;
+import com.mt.is.domain.rules.DroolsRule;
 import com.mt.is.domain.user.Role;
 import com.mt.is.domain.user.User;
 import com.mt.is.domain.user.UserRole;
@@ -10,6 +11,19 @@ import com.mt.is.domain.user.UserRole;
 class BootStrap {
 
     def init = { servletContext ->
+		def RULE_PROPERTY = "ruleText" // rule or ruleText
+		def classLoader = this.class.classLoader
+		String rule1 = '''		
+		rule "UserName is dhaval"
+		when
+			$u : User(username == "dhaval")
+		then
+			System.out.println("User is Dhaval");
+		end
+		'''
+		new DroolsRule((RULE_PROPERTY): rule1, description: "UserName is dhaval", packageName: "user").save()
+		String drlText = classLoader.getResourceAsStream("rules/user.drl").text
+		new DroolsRule((RULE_PROPERTY): drlText, description: "user.drl").save()
 		
 		/*def royalWhite = new SKU(
 			code: "DC6806-WHIT-D",

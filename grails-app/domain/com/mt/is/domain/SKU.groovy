@@ -5,6 +5,10 @@ import pl.burningice.plugins.image.ast.FileImageContainer;
 @FileImageContainer(field = 'skuImage')
 class SKU {
 	
+	static searchable = {
+		only = ['name','code','displayName']
+	}
+	
 	String code
 	String name
 	String displayName

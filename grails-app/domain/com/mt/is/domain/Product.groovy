@@ -5,7 +5,13 @@ import pl.burningice.plugins.image.ast.FileImageContainer;
 @FileImageContainer(field = 'productImage')
 class Product {
 	
-	//static searchable = true
+	static searchable = {
+		only = ["code","name","description","pcategories","sku","attributes","dateCreated"]
+		pcategories reference:true
+		sku reference:true
+		attributes reference:true	
+		dateCreated alias:'@timestamp'
+	}
 	
 	String code = "12345678"
 	String name
@@ -14,6 +20,8 @@ class Product {
 	String brand = "Apex"
 	boolean inStock = true
 	boolean featured = false
+	Date dateCreated;
+	Date lastUpdated;
 	
 	static belongsTo = [Category]
 	

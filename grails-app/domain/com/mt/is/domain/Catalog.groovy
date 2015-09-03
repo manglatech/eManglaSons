@@ -2,6 +2,11 @@ package com.mt.is.domain
 
 class Catalog {
 	
+	static searchable = {
+		root false
+		only = ['name','description']
+	}
+	
 	String name
 	String description
 		

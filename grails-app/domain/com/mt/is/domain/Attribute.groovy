@@ -4,6 +4,10 @@ import com.mt.is.utils.AttributeType;
 
 class Attribute {
 	
+	static searchable = {
+		only = ['name','value']
+	}
+	
 	String name
 	String value
 	AttributeType type

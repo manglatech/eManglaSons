@@ -18,5 +18,6 @@
 <div id="page-body">
 	<h1>Welcome to Rule Controller !! </h1>
 </div>
+<div> <a href="executeRule"> Click Here to Execute User Rules: </a></div>
 </body>
 </html>

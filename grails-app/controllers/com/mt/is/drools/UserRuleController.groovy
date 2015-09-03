@@ -8,7 +8,7 @@ import com.mt.is.domain.user.User
 class UserRuleController {
 
 	def droolsService
-	//StatelessKieSession applicationStatelessSession
+	StatelessKieSession defaultKieStatelessSession
 	//KieSession ticketStatefulSession
 	
     def index() {
@@ -21,23 +21,22 @@ class UserRuleController {
 	def getModel() {
 		def model = [results:[:]]
 
-		/*def user = new User("dhaval", "dhaval");
-		Object[] facts = [user]
-		applicationStatelessSession.execute(Arrays.asList(facts))
-		model.results["applicationStatelessSession - my user name is $user.username (true)"] = user.valid
-		*/
-		
 		def nirali = new User("nirali", "nirali");
 		Object[] facts1 = [nirali]
 		droolsService.executeFromFile("rules/user.drl", [nirali])
-		model.results["applicationStatelessSession - my user name is $nirali.username (false)"] = nirali.username
+		model.results["droolsService - my user name is $nirali.username (false)"] = nirali.username
 		
 		println "nirali Rule"
 		
 		def user = new User("dhaval", "dhaval");
 		Object[] facts = [user]
 		droolsService.executeFromFile("rules/user.drl", [user])
-		model.results["applicationStatelessSession - my user name is $user.username (true)"] = user.username
+		model.results["droolsService - my user name is $user.username (true)"] = user.username
+		
+		 user = new User("dhaval", "dhaval");
+		 facts = [user]
+		 defaultKieStatelessSession.execute(Arrays.asList(facts))
+		 model.results["defaultKieStatelessSession - my user name is $user.username (true)"] = user.username
 		
 		return model
 	}

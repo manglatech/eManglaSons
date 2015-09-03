@@ -169,5 +169,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 
 elasticSearch{
 	datastoreImpl='hibernateDatastore'
+	index.name = 'esManglaSons'
+	migration.strategy= 'delete'
 }
 
