@@ -116,7 +116,6 @@ log4j.main = {
            'net.sf.ehcache.hibernate'
 }
 
-
 import pl.burningice.plugins.image.engines.scale.ScaleType
 
 bi.Product = [
@@ -149,8 +148,11 @@ bi.SKU = [
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.auth.loginFormUrl = '/login'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
 grails.plugin.springsecurity.logout.afterLogoutUrl = '/home'
 grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl= '/login?login_error=1'
+grails.plugin.springsecurity.successHandler.useReferer = true
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.mt.is.domain.user.User'
@@ -173,3 +175,18 @@ elasticSearch{
 	migration.strategy= 'delete'
 }
 
+grails {
+   mail {
+     host = "smtp.gmail.com"
+     port = 465
+     username = "dhavaly2k@gmail.com"
+     password = "XXXX"
+     props = ["mail.smtp.auth":"true", 					   
+              "mail.smtp.socketFactory.port":"465",
+              "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+              "mail.smtp.socketFactory.fallback":"false"]
+   }
+}
+
+grails.mail.default.from="dhavaly2k@gmail.com"
+grails.mail.disabled=true

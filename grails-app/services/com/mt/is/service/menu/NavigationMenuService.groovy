@@ -9,6 +9,7 @@ class NavigationMenuService {
 	
 	@Transactional(readOnly = true)
     def getNavigationMenu() {
+		
 		def catalog = Catalog.findByName("mscatalog")
 		if(catalog)
 			catalog.first()

@@ -81,12 +81,18 @@ grails.project.dependency.resolution = {
 		compile ":burning-image:0.5.2"
 		compile ":spring-security-core:2.0-RC5"
 		compile ":drools:1.1.1"
+		compile ":mail:1.0.7"
+		compile ":twilio:0.1"
+		//compile ":cache-headers:1.1.7"
 		
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.8.1" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 		runtime ':elasticsearch:0.0.4.6'
+		//runtime ":resources:1.2.14"
+		//runtime ":cached-resources:1.0"
+		//runtime ":zipped-resources:1.0"
 		
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

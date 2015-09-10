@@ -5,6 +5,8 @@
 <body>
 	<g:render template="/common/header" />
 	 
+	 <div id="page-content">
+	 
 	 <div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">    		
@@ -58,6 +60,7 @@
 	    	</div>  
     	</div>	
     </div><!--/#contact-page-->
+	</div>
 	
   	<g:render template="/common/footer" />
   

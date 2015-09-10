@@ -1,6 +1,6 @@
 package com.mt.is.domain
 
-class Category {
+class Category implements Comparable{
 	
 	static searchable = {
 		only = ['name','displayName','description','catalogs']
@@ -26,5 +26,8 @@ class Category {
 	
 	String toString(){
 		return displayName
+	}
+	int compareTo(obj) {
+		name.compareTo(obj.name)
 	}
 }

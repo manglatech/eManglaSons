@@ -1,8 +1,9 @@
 package com.mt.is.controller
 
-import com.mt.is.domain.Catalog;
-import com.mt.is.service.menu.NavigationMenuService;
 import grails.converters.deep.JSON
+
+import com.mt.is.domain.Catalog
+import com.mt.is.service.menu.NavigationMenuService
 
 class HomePageController {
 
@@ -11,7 +12,6 @@ class HomePageController {
     def index() {
 		println "Default Page Called"
 	}
-	
 	def home(){
 		println "Landing Page Called"
 		Catalog catalog = (Catalog) navigationMenuService.getNavigationMenu()

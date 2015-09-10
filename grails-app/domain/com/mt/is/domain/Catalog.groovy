@@ -9,15 +9,14 @@ class Catalog {
 	
 	String name
 	String description
+	SortedSet categories
 		
 	static constraints = {
 		name blank:false, unique:true
 		description nullable:true, maxSize:1000
     }
-	
-	static belongsTo = [Category]
 	static hasMany = [categories: Category]
-	static mappedBy = [categories:"catalogs"]
+	static belongsTo = [Category]
 	
 	String toString(){
 		return name

@@ -9,23 +9,25 @@ class User implements Serializable {
 	String username
 	String password
 	String email
-	String phone
 	
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+	
+	boolean hasWebAccount = false
+	
 
-	User(String phone) {
+	User(String username) {
 		this()
-		this.phone = phone
-		this.enabled = false
+		this.username = username
 	}
 	
 	User(String username, String password) {
 		this()
 		this.username = username
 		this.password = password
+		this.hasWebAccount = true
 	}
 
 	@Override
@@ -67,7 +69,6 @@ class User implements Serializable {
 		username blank: false, unique: true
 		password blank: false
 		email nullable:true
-		phone nullable:true
 	}
 
 	static mapping = {

@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<g:render template="/common/head" />
+
+<body>
+	<g:render template="/common/header" />
+	 
+	 <div id="page-content">
+	 
 <div id="productList">
 	<section id="advertisement">
 		<div class="container">
@@ -21,13 +30,13 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<g:remoteLink controller="product" action="productdetails" params='[id:"${product.id}"]' update="mainContent">
+										<g:link controller="product" action="productdetails" params='[id:"${product.id}"]'>
 											<bi:img bean="${product}" size="small" />
-										</g:remoteLink>
+										</g:link>
 										<h2>${product?.price}</h2>
-										<g:remoteLink controller="product" action="productdetails" params='[id:"${product.id}"]' update="mainContent">
+										<g:link controller="product" action="productdetails" params='[id:"${product.id}"]'>
 											<p>${product?.name}</p>
-										</g:remoteLink>
+										</g:link>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 								</div>
@@ -62,3 +71,9 @@
 		</div>
 	</section>
 </div>
+
+</div>
+<g:render template="/common/footer" />
+  
+</body>
+</html>

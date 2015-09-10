@@ -4,8 +4,8 @@
 <body>
 
 	<g:render template="/common/header" />
-	<div id="mainContent">
-		<g:render template="/common/homePageMainContent" />
+	 <div id="page-content">
+			<g:render template="/common/homePageMainContent" />
 	</div>
 	<g:render template="/common/footer" />
     
