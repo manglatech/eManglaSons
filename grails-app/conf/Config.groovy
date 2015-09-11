@@ -116,6 +116,10 @@ log4j.main = {
            'net.sf.ehcache.hibernate'
 }
 
+grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**']
+grails.resources.debug = true
+
 import pl.burningice.plugins.image.engines.scale.ScaleType
 
 bi.Product = [

@@ -14,6 +14,7 @@ class HomePageController {
 	}
 	def home(){
 		println "Landing Page Called"
+				
 		Catalog catalog = (Catalog) navigationMenuService.getNavigationMenu()
 		
 		withFormat {
