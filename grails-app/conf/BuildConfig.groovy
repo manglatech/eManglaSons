@@ -84,6 +84,7 @@ grails.project.dependency.resolution = {
 		compile ":mail:1.0.7"
 		compile ":twilio:0.1"
 		compile ":cache-headers:1.1.7"
+		compile ":google-analytics:2.3.3"
 		
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.8.1" // or ":hibernate:3.6.10.18"

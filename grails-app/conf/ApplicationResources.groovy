@@ -1,5 +1,6 @@
 modules = {
 	application {
+		
 		dependsOn 'jquery'
 		resource url:'/js/bootstrap.min.js'
 		resource url:'/js/price-range.js'
@@ -16,5 +17,15 @@ modules = {
 		resource url:'/css/main.css'
 		resource url:'/css/responsive.css'
 		resource url:'/css/header.css'
+		
+	}
+	
+	contactus {
+		dependsOn 'application'
+		resource url: '/js/gmaps.js'
+		resource url: '/js/contact.js'	
+	}	
+	grails{
+		resource url: '/css/grails.css'
 	}
 }

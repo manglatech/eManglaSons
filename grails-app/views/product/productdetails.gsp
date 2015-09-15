@@ -3,10 +3,7 @@
 <g:render template="/common/head" />
 
 <body>
-	<g:render template="/common/header" />
-	 
-	 <div id="page-content">
-	 
+
 	<section>
 		<div class="container">
 			<div class="row">
@@ -61,10 +58,11 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+								<r:img uri="/images/home/new.jpg" class="newarrival"/>
+								
 								<h2>${msProduct.name}</h2>
 								<p>Web ID: ${msProduct.code}</p>
-								<img src="images/product-details/rating.png" alt="" />
+								<r:img uri="/images/product-details/rating.png" />
 								<span>
 									<span>RS ${msProduct.price}</span>
 									<label>Quantity:</label>
@@ -76,7 +74,9 @@
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Brand:</b> ${msProduct.brand}</p>
-								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+								<a href="">
+									<r:img uri="/images/product-details/share.png" class="share img-responsive"  alt="" />
+								</a>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
@@ -96,7 +96,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
+												<r:img uri="/images/home/gallery1.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -108,7 +108,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
+												<r:img uri="/images/home/gallery2.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -120,7 +120,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
+												<r:img uri="/images/home/gallery3.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -132,7 +132,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
+												<r:img uri="/images/home/gallery4.jpg" alt="" />
 												<h2>$56</h2>
 												<p>Easy Polo Black Edition</p>
 												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
@@ -367,17 +367,13 @@
 			<div class="col-sm-3">
 					<div class="left-sidebar">
 						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
+							<r:img uri="/images/home/shipping.jpg"/>
 						</div><!--/shipping-->
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	</div>
-	<g:render template="/common/footer" />
-  
     
 </body>
 </html>

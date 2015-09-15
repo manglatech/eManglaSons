@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <g:render template="/common/head" />
-
 <body>
-	<g:render template="/common/header" />
-	 
-	 <div id="page-content">
-	 
 <div id="productList">
 	<section id="advertisement">
 		<div class="container">
-			<img src="images/shop/advertisement.jpg" alt="" />
+			<r:img uri="/images/shop/advertisement.jpg"/>
 		</div>
 	</section>
 	
@@ -71,9 +66,6 @@
 		</div>
 	</section>
 </div>
-
-</div>
-<g:render template="/common/footer" />
   
 </body>
 </html>

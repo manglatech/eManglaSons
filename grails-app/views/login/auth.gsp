@@ -3,9 +3,6 @@
 <g:render template="/common/head" />
 
 <body>
-	<g:render template="/common/header" />
-	 
-	 <div id="page-content">	
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
@@ -52,8 +49,5 @@
 			</div>
 		</div>
 	</section>
-	
-	</div>
-	<g:render template="/common/footer" />
 </body>
 </html>

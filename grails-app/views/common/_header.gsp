@@ -8,7 +8,9 @@
 				<a class="navbar-toggle"> <span class="sr-only">Toggle
 						navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</a> <a class="navbar-brand" href="home">eManglaSons</a>
+				</a> 
+				<!-- <a class="navbar-brand" href="/home">eManglaSons</a> -->
+				<g:link url='home' class="navbar-brand" >eManglaSons</g:link>
 				<!-- <a class="navbar-brand" href="home"><img src="images/home/logo.png" alt="" /></a>  -->
 			</div>
 

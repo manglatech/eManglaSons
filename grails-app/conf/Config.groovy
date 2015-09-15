@@ -12,6 +12,7 @@
 // }
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
+// WHY ??? FINDOUT --- grails.app.context = '/eManglaSons'
 
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
@@ -116,8 +117,8 @@ log4j.main = {
            'net.sf.ehcache.hibernate'
 }
 
-grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
-grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**']
+grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*','/fonts/*']
+grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**','/fonts/**']
 grails.resources.debug = true
 
 import pl.burningice.plugins.image.engines.scale.ScaleType

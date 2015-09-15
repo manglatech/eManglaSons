@@ -6,48 +6,26 @@ import grails.converters.JSON
 
 class PersonalizationController {
 	
-	def springSecurityService
+	def personalizationService
 		   
     def index() { }
+	
 	def featuredProducts(){
 		
-		def user = springSecurityService.isLoggedIn() ? springSecurityService.loadCurrentUser() : null
-		if (user) {
-			println "Finding Featured Products for User: ${user.id}"
-		}
-			
-		println "Location of Featured Products is ${params?.location}"
-		println "FeaturedProducts for Product ${params?.productId}"
-		
-		def products = Product.where {
-							featured  == true
-						}.list(max: 3)
-		
+		def products = personalizationService.retriveFeaturedProducts(params?.location, params?.productId);
 		withFormat {
 			html { [featuredProducts:products] }
-			json { render featuredProducts as JSON }
+			json { render products as JSON }
 		}
 	}
 	
 	def recommendedProducts(){
 		
-		def user = springSecurityService.isLoggedIn() ? springSecurityService.loadCurrentUser() : null
-		if (user) {
-			println "Finding Recommended Products for User: ${user.id}"
-		}
-		
-		println "Location of Recommendation is ${params?.location}"
-		println "Recommendation Products for Product ${params?.productId}"
-		
-		def products = Product.where {
-							featured  == true
-						}.list(max: 3)
-		
-		println "Total Recommended Products found : ${products?.size()}"
-		
+		def products = personalizationService.retriveRecommentedProducts(params?.location, params?.productId)
+	
 		withFormat {
 			html { [recommendedProducts:products] }
-			json { render recommendedProducts as JSON }
+			json { render products as JSON }
 		}
 	}
 	

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<g:render template="/common/head" />
-
+<head>
+	<meta name="layout" content="eManglaSons">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | eManglaSons</title>
+   	<r:require module="contactus"/>
+</head>
 <body>
 	<g:render template="/common/header" />
 	 
@@ -64,15 +69,7 @@
 	
   	<g:render template="/common/footer" />
   
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="js/gmaps.js"></script>
-	<script src="js/contact.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+ 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     
 </body>
 </html>
