@@ -8,6 +8,7 @@ modules = {
 		resource url:'/js/jquery.prettyPhoto.js'
 		resource url:'/js/main.js'
 		resource url:'/js/header.js'
+		resource url:'/js/ga.js'
 		
 		resource url:'/css/bootstrap.min.css'
 		resource url:'/css/font-awesome.min.css'
@@ -23,7 +24,8 @@ modules = {
 	contactus {
 		dependsOn 'application'
 		resource url: '/js/gmaps.js'
-		resource url: '/js/contact.js'	
+		resource url: '/js/contact.js'
+		resource url:'/js/ga.js'
 	}	
 	grails{
 		resource url: '/css/grails.css'

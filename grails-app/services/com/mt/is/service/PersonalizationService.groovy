@@ -22,6 +22,7 @@ class PersonalizationService {
 			println "Finding Featured Products for User: ${user.id}"
 			
 		}else{
+			// return TOP 3 Items Sold or View by Users.
 			def products = Product.where {
 				featured  == true
 			}.list(max: 3)

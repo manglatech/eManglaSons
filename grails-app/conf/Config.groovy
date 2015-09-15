@@ -195,3 +195,10 @@ grails {
 
 grails.mail.default.from="dhavaly2k@gmail.com"
 grails.mail.disabled=true
+
+// ----- Google Analytics ----
+
+google.analytics.webPropertyID = "UA-67654326-1"
+google.analytics.enabled = true
+
+// ---------------------------
