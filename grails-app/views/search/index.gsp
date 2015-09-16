@@ -20,7 +20,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<g:form action="search" id="searchform">
+				<g:form action="globalSearch" id="searchform">
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-2 control-label">
 							Search Box </label>

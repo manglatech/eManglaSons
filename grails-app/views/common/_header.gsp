@@ -15,15 +15,13 @@
 			</div>
 
 			<div id="slidemenu">
-				<g:formRemote update="mainContent"
-					url="[action:'searchProducts',controller:'product']"
+				<g:form url="[action:'globalSearch',controller:'Search']"
 					name="searchform" class="navbar-form navbar-right">
 					<div class="form-group">
 						<g:textField name="searchTerm" placeholder="Search Term Here"
 							class="form-control" />
 					</div>
-
-				</g:formRemote>
+				</g:form>
 
 				<ul class="nav navbar-nav">
 					<g:each in="${msCatalog?.categories}" var="topCategory">

@@ -174,11 +174,17 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':  ['permitAll']
 ]
 
+// ----- Elastic Search Service ----
+
 elasticSearch{
 	datastoreImpl='hibernateDatastore'
 	index.name = 'esManglaSons'
 	migration.strategy= 'delete'
 }
+
+// ---------------------------
+
+// ----- Email Service ----
 
 grails {
    mail {
@@ -195,6 +201,8 @@ grails {
 
 grails.mail.default.from="dhavaly2k@gmail.com"
 grails.mail.disabled=true
+
+// ---------------------------
 
 // ----- Google Analytics ----
 

@@ -208,6 +208,7 @@ class ProductController {
 		
 	}
 	
+	/*
 	def searchProducts() {
 		
 		println "Search Called !!"
@@ -241,6 +242,7 @@ class ProductController {
 		render(view: 'productlist', model: [products:products])
 		
 	}
+	*/
 	
     protected void notFound() {
         request.withFormat {

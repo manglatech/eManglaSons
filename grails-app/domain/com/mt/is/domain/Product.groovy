@@ -6,7 +6,7 @@ import pl.burningice.plugins.image.ast.FileImageContainer;
 class Product {
 	
 	static searchable = {
-		only = ["code","name","description","pcategories","sku","attributes","dateCreated"]
+		only = ["id","code","name","description","pcategories","sku","attributes","dateCreated","inStock","featured","brand","price"]
 		pcategories reference:true
 		sku reference:true
 		attributes reference:true	

@@ -9,6 +9,8 @@ class PersonalizationService {
 	boolean transactional = false
 	
 	def springSecurityService
+	def myESearchService
+	def esearchserviceService
 	
     def retriveFeaturedProducts(def location, def productId) {
 		
@@ -22,14 +24,11 @@ class PersonalizationService {
 			println "Finding Featured Products for User: ${user.id}"
 			
 		}else{
-			// return TOP 3 Items Sold or View by Users.
-			def products = Product.where {
-				featured  == true
-			}.list(max: 3)
-		}
-			
 		
-						
+			println "${esearchserviceService} !! ESearchService : FeaturedProductSearch Called !! ${myESearchService} "
+			def products = myESearchService.featuredProductSearch();
+					
+		}			
     }
 	
 	def retriveRecommentedProducts(def location, def productId){

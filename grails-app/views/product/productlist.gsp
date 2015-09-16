@@ -13,7 +13,7 @@
 		<div class="container">
 			<div class="row">
 				
-				<g:render template="productFilters" />
+				<g:render template="/product/productFilters" />
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
