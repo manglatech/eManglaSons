@@ -20,8 +20,9 @@ class Product {
 	String brand = "Apex"
 	boolean inStock = true
 	boolean featured = false
-	Date dateCreated;
-	Date lastUpdated;
+	Date dateCreated
+	Date lastUpdated
+	String imageUrl
 	
 	static belongsTo = [Category]
 	
@@ -31,6 +32,7 @@ class Product {
 	static constraints = {
 		name blank:false
 		description nullable:true, maxSize:6000
+		imageUrl nullable:true
     }
 	
 	String toString(){

@@ -1,4 +1,4 @@
-package com.mt.is
+package com.mt.is.elastic
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
@@ -6,8 +6,8 @@ import spock.lang.Specification
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
-@TestFor(EsearchserviceService)
-class EsearchserviceServiceSpec extends Specification {
+@TestFor(ProductSearchService)
+class SearchServiceSpec extends Specification {
 
     def setup() {
     }

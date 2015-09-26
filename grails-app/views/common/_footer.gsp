@@ -1,6 +1,8 @@
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">
 			<div class="container">
+			
+			<!-- 
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
@@ -76,9 +78,12 @@
 						</div>
 					</div>
 				</div>
+				-->
+				
 			</div>
 		</div>
-		
+		 
+		 
 		<div class="footer-widget">
 			<div class="container">
 				<div class="row">

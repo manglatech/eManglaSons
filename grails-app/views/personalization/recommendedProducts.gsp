@@ -10,13 +10,13 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<g:remoteLink controller="product" action="productdetails" params='[id:"${product.id}"]' update="mainContent">
+													<g:link controller="product" action="productdetails" params='[id:"${product.id}"]'>
 														<bi:img size="small" bean="${product}" />
-													</g:remoteLink>
+													</g:link>
 														<h2>${product?.price}</h2>
-													<g:remoteLink action="productdetails" controller="product"  params='[id:"${product.id}"]' update="mainContent">
+													<g:link controller="product" action="productdetails" params='[id:"${product.id}"]'>
 														<p>${product?.name}</p>
-													</g:remoteLink>
+													</g:link>
 											
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>												

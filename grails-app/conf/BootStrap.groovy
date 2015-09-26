@@ -4,6 +4,7 @@ import com.mt.is.domain.CategoryMapping;
 import com.mt.is.domain.Product;
 import com.mt.is.domain.SKU;
 import com.mt.is.domain.rules.DroolsRule;
+import com.mt.is.domain.search.ElasticSearchAggregations;
 import com.mt.is.domain.user.Role;
 import com.mt.is.domain.user.User;
 import com.mt.is.domain.user.UserRole;
@@ -11,6 +12,12 @@ import com.mt.is.domain.user.UserRole;
 class BootStrap {
 
     def init = { servletContext ->
+		
+		/*new ElasticSearchAggregations(
+			label : "brand",
+			fieldName: "brand"
+		).save(failOnError:true)*/
+		
 		def RULE_PROPERTY = "ruleText" // rule or ruleText
 		def classLoader = this.class.classLoader
 		String rule1 = '''		

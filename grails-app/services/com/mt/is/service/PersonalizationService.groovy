@@ -9,8 +9,7 @@ class PersonalizationService {
 	boolean transactional = false
 	
 	def springSecurityService
-	def myESearchService
-	def esearchserviceService
+	def productSearchService
 	
     def retriveFeaturedProducts(def location, def productId) {
 		
@@ -24,9 +23,8 @@ class PersonalizationService {
 			println "Finding Featured Products for User: ${user.id}"
 			
 		}else{
-		
-			println "${esearchserviceService} !! ESearchService : FeaturedProductSearch Called !! ${myESearchService} "
-			def products = myESearchService.featuredProductSearch();
+			println "Elastic Search Service : FeaturedProductSearch Called !! "
+			def products = productSearchService.featuredProductSearch();
 					
 		}			
     }
@@ -46,6 +44,8 @@ class PersonalizationService {
 						}.list(max: 3)
 		
 		println "Total Recommended Products found : ${products?.size()}"
+		
+		return products
 		
 	}
 }

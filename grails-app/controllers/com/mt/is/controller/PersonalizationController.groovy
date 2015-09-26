@@ -22,7 +22,6 @@ class PersonalizationController {
 	def recommendedProducts(){
 		
 		def products = personalizationService.retriveRecommentedProducts(params?.location, params?.productId)
-	
 		withFormat {
 			html { [recommendedProducts:products] }
 			json { render products as JSON }
